@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{indentfirst}% first line indent
+\usepackage{tikz}% a draw tool
+\usepackage[utf8]{inputenc}% hat over letter
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section] % definition numbers are dependent on theorem numbers
+\newtheorem{ex}{Example}[section] % same for example numbers
+
+\newcommand{\normal}{\vartriangleleft}% symbol of normality
+
+\title{\textbf{Normality, Quotient Groups, And Homomorphism}}
+\author{Fudong}
+\begin{document}
+\maketitle
+\section{Introduction}
+Normal subgroups play a remarkablily important role in determining both the structure of a group $G$ and the homomorphisms with domain $G$. This note derives from \href{http://www.amazon.com/Algebra-Graduate-Texts-Mathematics-v/dp/0387905189}{\textcolor{blue}{\textbf{Hungerford's Algebra}}} textbook Chapter I section 5. The notations inherit this book.
+\section{Definition}
+
+\begin{defn}[\textbf{normal subgroup}]
+A subgroup $N$ of a group $G$ satisfies $aN=Na,\forall a \in G$ is said to be \em{normal} in $G$. write as $N\normal G$.
+\end{defn}
+\begin{defn}[\textbf{quotient group or factor group}]
+$G/N$ is the set of all cosets of $N$ in $G$. $N\normal G$, we call $G/N$ \em{quotient group} of $G$ by $N$. 
+\end{defn}
+\begin{defn}[\textbf{canonical epimorphism or projection}]
+The map $\pi:G\rightarrow G/N$ is called \em{canonical epiphism or projection}.
+\end{defn}
+
+
+
+\section{Themorem and Corollary}
+\begin{thm}[\textbf{Quotient group theorem}]
+$f:G\rightarrow H$is homomorphsim. $N\normal G$,$N\subseteq \ker f$ $\Rightarrow$ there is a unique homomophism $\overline{f}:G/N\rightarrow H$ s.t. $\overline{f}(aN)=f(a)$ for all $a\in G$.$Im\,f=Im\,\overline{f}$ and $Ker\,\overline{f}=(Ker\,f)/N$.$\overline{f}$ is isomorphism iff f is epimorphism and $N=\ker f$.\\
+%\end{thm}
+\begin{tikzpicture}
+\draw [->] (0,0)--(0,-1);
+\node [above] at (0,0) {$G$} ;
+\node [below] at (0,-1) {$G/N$};
+\draw [->] (0.5,-1)--(4,-0);
+\draw [->] (0.2,0.2)--(4+0,0.2);
+\node [right,above] at (4.2,-0.1){$H$};
+\node [above] at (2,0.2){$f$};
+\node [right,below] at (2.3,-0.5) {$\overline{f}$};
+\end{tikzpicture}
+\end{thm}
+\begin{thm}[\textbf{First Isomorphism Theorem}]
+If $f:G\rightarrow H$ is a homomorphism, then f induces an isomorphism $G/Ker\, f\cong Im\, f$.
+\end{thm}
+\begin{thm}[\textbf{Second Isomorphism Theorem}]
+
+\end{thm}
+\begin{thm}[\textbf{Third Isomorphism Theorem}]
+\end{thm}
+\section{Summary and Exercise}
+
+\end{document}
